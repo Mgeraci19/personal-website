@@ -1,40 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Personal Website
 
-## Getting Started
+A minimalist, high-performance personal website and digital garden built with **Next.js** and **MDX**.
 
-First, run the development server:
+## 🚀 Usage
 
+### Development
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Open http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Build & Test RSS
+```bash
+npm run build
+# Generates static HTML and public/rss.xml
+```
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## 🛠 Tech Stack
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+*   **Framework**: [Next.js](https://nextjs.org/) (Pages Router)
+    *   Chosen for simplicity and robust Static Site Generation (SSG).
+    *   Configured with `output: 'export'` for serverless hosting.
+*   **Content**: [MDX](https://mdxjs.com/)
+    *   Allows writing content in Markdown + React components.
+    *   Configured to support `.md` files to allow direct editing in **Obsidian**.
+*   **Styling**: Vanilla CSS
+    *   No Tailwind or heavy libraries. Pure CSS variables for theming.
+    *   Focus on typography, readability, and zero layout shift.
+*   **Deployment**: GitHub Pages
+    *   Deploys automatically via GitHub Actions on push to `main`.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 💡 Key Architectural Decisions
 
-To learn more about Next.js, take a look at the following resources:
+### 1. The "Obsidian Workflow"
+This site is designed to be a "Digital Garden" that can be tended to directly from an Obsidian vault.
+*   **File Format**: The blog index (`pages/blog/index.js`) reads both `.mdx` and `.md` files.
+*   **Workflow**: Write post in Obsidian -> Commit & Push via Obsidian Git -> Site auto-deploys.
+*   **Frontmatter**: Posts use standard YAML frontmatter (`title`, `date`, `description`).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+### 2. No-Server Subscription Model
+Instead of a complex backend, we use **RSS-to-Email** to handle subscriptions.
+1.  **Generation**: A custom script (`scripts/generate-rss.js`) runs at build time to create `public/rss.xml`.
+2.  **Delivery**: Services like **Buttondown** poll this feed and email new posts to subscribers automatically.
+3.  **Benefit**: Zero database maintenance, free hosting, full control.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 3. "Document Style" Design
+The design specifically mimicks high-quality documentation sites (like Vercel or Stripe docs) rather than generic marketing blobs.
+*   **Typography**: Inter (System UI fallback) with tight line-heights for density.
+*   **Components**: Includes `<Callout />` for alerts and **Syntax Highlighting** (Highlight.js) for code blocks.
+*   **Consistency**: Every page (Home, Blog, Projects) shares the exact same header/width hierarchy.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📂 Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+```
+├── components/      # React components (Layout, Navigation, Callout)
+├── pages/
+│   ├── blog/        # Blog posts (.md/.mdx) + Index
+│   ├── index.js     # Homepage
+│   ├── projects.mdx # Projects portfolio
+│   ├── books.mdx    # Reading list
+│   └── _app.js      # Global wrapper (MDX Provider, Layout)
+├── public/          # Static assets + images
+├── scripts/         # Build utilities (RSS generator)
+└── styles/          # CSS modules and globals
+```
+
+## 📝 Writing Content for Future You
+
+### Adding a Blog Post
+1. Create a file in `pages/blog/my-post.md`.
+2. Add frontmatter:
+   ```yaml
+   ---
+   title: My Post
+   date: '2024-01-01'
+   description: One sentence summary.
+   ---
+   ```
+3. Write standard Markdown.
+
+### Using Components
+You can use React components inside `.mdx` files (or `.md` if recognized):
+
+**Callouts**:
+```jsx
+<Callout type="note" title="Heads up">
+  This is a note.
+</Callout>
+```
+
+**Code Blocks**:
+Just use standard markdown fences (\`\`\`) - they highlight automatically.

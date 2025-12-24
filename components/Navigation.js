@@ -11,6 +11,9 @@ export default function Navigation() {
                 <Link href="/" className={styles.link}>
                     Home
                 </Link>
+                <Link href="/projects" className={styles.link}>
+                    Projects
+                </Link>
                 <Link href="/blog" className={styles.link}>
                     Thoughts
                 </Link>
@@ -19,9 +22,6 @@ export default function Navigation() {
                 </Link>
                 <Link href="/links" className={styles.link}>
                     Links
-                </Link>
-                <Link href="/interests" className={styles.link}>
-                    Interests
                 </Link>
             </div>
         </nav>

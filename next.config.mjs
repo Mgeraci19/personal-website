@@ -1,10 +1,13 @@
 import nextMDX from '@next/mdx';
 
+import rehypeHighlight from 'rehype-highlight';
+
 const withMDX = nextMDX({
   extension: /\.mdx?$/,
   options: {
     remarkPlugins: [],
     rehypePlugins: [],
+    providerImportSource: "@mdx-js/react",
   },
 });
 

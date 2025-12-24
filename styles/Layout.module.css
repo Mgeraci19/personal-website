@@ -11,8 +11,24 @@
 .footer {
     border-top: 1px solid var(--card-border);
     padding: 2rem 0;
-    text-align: center;
-    opacity: 0.5;
-    font-size: 0.9rem;
     margin-top: auto;
+    color: var(--foreground);
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+.footerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rssLink {
+    opacity: 0.5;
+    transition: opacity 0.2s;
+}
+
+.rssLink:hover {
+    opacity: 1;
+    color: var(--primary);
 }

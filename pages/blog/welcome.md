@@ -1,5 +1,5 @@
 ---
-title: Welcome to my digital garden
+title: Welcome to my blog
 date: '2025-12-24'
 description: This is the start of my personal blog where I'll share my thoughts and projects.
 ---

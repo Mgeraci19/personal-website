@@ -1,3 +1,78 @@
+/* Syntax Highlighting (Atom One Dark) */
+.hljs {
+  color: #abb2bf;
+  background: #282c34
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #5c6370;
+  font-style: italic
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #c678dd
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e06c75
+}
+
+.hljs-literal {
+  color: #56b6c2
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta-string {
+  color: #98c379
+}
+
+.hljs-built_in,
+.hljs-class .hljs-title {
+  color: #e6c07b
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #d19a66
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #61aeee
+}
+
+.hljs-emphasis {
+  font-style: italic
+}
+
+.hljs-strong {
+  font-weight: bold
+}
+
+.hljs-link {
+  text-decoration: underline
+}
+
 :root {
   --background: #050505;
   --foreground: #f0f0f0;
@@ -55,46 +130,52 @@ h1 {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  margin-top: 2rem;
+  margin-top: 0rem;
+  /* Reduced from 2rem */
   line-height: 1.2;
 }
 
 h2 {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
+  margin-top: 0rem;
+  /* Reduced from 2.5rem */
+  margin-bottom: 0rem;
   border-bottom: 1px solid var(--card-border);
-  padding-bottom: 0.5rem;
+  padding-bottom: 0em;
 }
 
 h3 {
   font-size: 1.2rem;
   font-weight: 600;
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
 }
 
 p,
 li {
   font-size: 1.1rem;
-  line-height: 1.7;
+  line-height: 1.6;
+  /* Reduced from 1.7 */
   color: var(--foreground);
 }
 
 p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.8rem;
+  /* Reduced from 1.5rem */
   opacity: 0.9;
 }
 
 ul,
 ol {
   padding-left: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  /* Reduced from 1.5rem */
 }
 
 li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
+  /* Reduced from 0.5rem */
 }
 
 main a {

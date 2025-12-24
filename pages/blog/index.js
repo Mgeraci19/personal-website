@@ -37,7 +37,7 @@ export default function BlogIndex({ posts }) {
 export async function getStaticProps() {
     const files = fs.readdirSync(path.join('pages/blog'));
     const posts = files
-        .filter(filename => filename.includes('.mdx'))
+        .filter(filename => filename.endsWith('.md') || filename.endsWith('.mdx'))
         .map(filename => {
             const markdownWithMeta = fs.readFileSync(path.join('pages/blog', filename), 'utf-8');
             const { data } = matter(markdownWithMeta);

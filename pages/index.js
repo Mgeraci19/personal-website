@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Callout from '../components/Callout';
 
 export default function Home() {
   return (
@@ -19,8 +20,13 @@ export default function Home() {
           I enjoy building simple, performant tools and exploring the outdoors.
         </p>
 
-        <h2>Writing</h2>
+        <Callout type="note" title="Status">
+          I am currently exploring <strong>Next.js</strong> and <strong>MDX</strong> to build better documentation tools.
+        </Callout>
+
+        <h2>Work</h2>
         <ul>
+          <li><a href="/projects">Projects</a> – Things I've built</li>
           <li><a href="/blog">Thoughts</a> – Loose updates and essays</li>
         </ul>
 
@@ -32,7 +38,6 @@ export default function Home() {
 
         <h2>Personal</h2>
         <ul>
-          <li><a href="/interests">Interests</a> – Hiking, lifting, biking</li>
           <li><a href="https://github.com/Mgeraci19">GitHub</a> – Code and projects</li>
         </ul>
       </div>

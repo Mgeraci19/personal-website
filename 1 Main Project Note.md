@@ -18,3 +18,7 @@ https://beta.vero.site/ - This is a simple site that allowed me to learn alot ab
 
 ## Architecture
 I want to keep the site simple. I have a cloudflare url I eventually would hook up to but for now github pages is sufficient. Ideally the most complexity the page would have is basic react. I dont currently see a need for a backend
+
+
+RSS Feed- Buttondown: https://buttondown.com/emails/6a272b69-8653-4940-a195-3e673e99bf33
+
