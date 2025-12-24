@@ -1,0 +1,41 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--card-border);
+    padding: 0.8rem 0;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+.link {
+    font-weight: 500;
+    opacity: 0.7;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+.link:hover,
+.active {
+    opacity: 1;
+    color: var(--primary);
+}
