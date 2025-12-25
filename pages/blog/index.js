@@ -11,7 +11,7 @@ export default function BlogIndex({ posts }) {
                 <title>Blog - Michael Geraci</title>
             </Head>
             <div>
-                <h1>Thoughts</h1>
+                <h1>Blog</h1>
                 <ul>
                     {posts.map(post => (
                         <li key={post.slug}>

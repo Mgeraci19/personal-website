@@ -15,7 +15,7 @@ export default function Navigation() {
                     Projects
                 </Link>
                 <Link href="/blog" className={styles.link}>
-                    Thoughts
+                    Blog
                 </Link>
                 <Link href="/books" className={styles.link}>
                     Books

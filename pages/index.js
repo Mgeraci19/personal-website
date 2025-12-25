@@ -28,7 +28,7 @@ export default function Home() {
         <h2>Work</h2>
         <ul>
           <li><Link href="/projects">Projects</Link> – Things I've built</li>
-          <li><Link href="/blog">Thoughts</Link> – Loose updates and essays</li>
+          <li><Link href="/blog">Blog</Link> – Loose updates and essays</li>
         </ul>
 
         <h2>Collection</h2>

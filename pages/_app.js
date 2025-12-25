@@ -27,7 +27,7 @@ export default function App({ Component, pageProps }) {
       <Layout>
         {isBlogPost && (
           <div className="back-link">
-            <Link href="/blog">← Back to Thoughts</Link>
+            <Link href="/blog">← Back to Blog</Link>
             <style jsx>{`
               .back-link {
                 margin-bottom: 2rem;
