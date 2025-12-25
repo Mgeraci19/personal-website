@@ -1,7 +1,5 @@
 import nextMDX from '@next/mdx';
 
-import rehypeHighlight from 'rehype-highlight';
-
 const withMDX = nextMDX({
   extension: /\.mdx?$/,
   options: {
@@ -20,7 +18,7 @@ const envConfig = {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  pageExtensions: ['js', 'jsx', 'md', 'mdx'],
+  pageExtensions: ['js', 'jsx'],
   output: 'export',
   images: {
     unoptimized: true,
