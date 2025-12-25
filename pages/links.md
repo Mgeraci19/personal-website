@@ -1,10 +1,3 @@
-import Head from 'next/head';
-
-<Head>
-  <title>Links - Michael Geraci</title>
-  <meta name="description" content="A curation of interesting articles, blogs, and resources." />
-</Head>
-
 # Links
 
 A collection of things I've read and found interesting.

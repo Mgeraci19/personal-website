@@ -4,21 +4,21 @@
         <description><![CDATA[Personal thoughts and essays.]]></description>
         <link>https://mgeraci19.github.io/personal-website</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 24 Dec 2025 19:38:18 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 25 Dec 2025 05:23:28 GMT</lastBuildDate>
         <atom:link href="https://mgeraci19.github.io/personal-website/rss.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Wed, 24 Dec 2025 19:38:18 GMT</pubDate>
+        <pubDate>Thu, 25 Dec 2025 05:23:28 GMT</pubDate>
         <copyright><![CDATA[All rights reserved 2025, Michael Geraci]]></copyright>
         <language><![CDATA[en]]></language>
         <item>
-            <title><![CDATA[Test Article]]></title>
-            <description><![CDATA[This is the start of my personal blog where I'll share my thoughts and projects.]]></description>
+            <title><![CDATA[Test Post]]></title>
+            <description><![CDATA[A test post.]]></description>
             <link>https://mgeraci19.github.io/personal-website/blog/test</link>
             <guid isPermaLink="true">https://mgeraci19.github.io/personal-website/blog/test</guid>
             <dc:creator><![CDATA[Michael Geraci]]></dc:creator>
             <pubDate>Wed, 24 Dec 2025 00:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Welcome to my digital garden]]></title>
+            <title><![CDATA[Welcome to my blog]]></title>
             <description><![CDATA[This is the start of my personal blog where I'll share my thoughts and projects.]]></description>
             <link>https://mgeraci19.github.io/personal-website/blog/welcome</link>
             <guid isPermaLink="true">https://mgeraci19.github.io/personal-website/blog/welcome</guid>

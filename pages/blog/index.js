@@ -35,11 +35,11 @@ export default function BlogIndex({ posts }) {
 }
 
 export async function getStaticProps() {
-    const files = fs.readdirSync(path.join('pages/blog'));
+    const files = fs.readdirSync(path.join('content/blog'));
     const posts = files
         .filter(filename => filename.endsWith('.md') || filename.endsWith('.mdx'))
         .map(filename => {
-            const markdownWithMeta = fs.readFileSync(path.join('pages/blog', filename), 'utf-8');
+            const markdownWithMeta = fs.readFileSync(path.join('content/blog', filename), 'utf-8');
             const { data } = matter(markdownWithMeta);
             return {
                 frontMatter: data,

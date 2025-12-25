@@ -11,14 +11,14 @@ const withMDX = nextMDX({
 
 const isProd = process.env.NODE_ENV === 'production';
 const envConfig = {
-  isProd,
+  isProd: String(isProd),
 };
 
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  pageExtensions: ['js', 'jsx'],
+  pageExtensions: ['js', 'jsx', 'md', 'mdx'],
   output: 'export',
   images: {
     unoptimized: true,

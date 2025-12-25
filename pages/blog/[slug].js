@@ -65,7 +65,7 @@ export default function BlogPost({ frontMatter, mdxSource }) {
 }
 
 export async function getStaticPaths() {
-    const files = fs.readdirSync(path.join('pages/blog'));
+    const files = fs.readdirSync(path.join('content/blog'));
     // Filter only markdown files, ignore index.js and other non-content
     const paths = files
         .filter(filename => filename.endsWith('.md') || filename.endsWith('.mdx'))
@@ -85,9 +85,9 @@ export async function getStaticProps({ params: { slug } }) {
     // Try both extensions
     let markdownWithMeta;
     try {
-        markdownWithMeta = fs.readFileSync(path.join('pages/blog', slug + '.md'), 'utf-8');
+        markdownWithMeta = fs.readFileSync(path.join('content/blog', slug + '.md'), 'utf-8');
     } catch (err) {
-        markdownWithMeta = fs.readFileSync(path.join('pages/blog', slug + '.mdx'), 'utf-8');
+        markdownWithMeta = fs.readFileSync(path.join('content/blog', slug + '.mdx'), 'utf-8');
     }
 
     const { data: frontMatter, content } = matter(markdownWithMeta);

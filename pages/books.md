@@ -1,10 +1,3 @@
-import Head from 'next/head';
-
-<Head>
-  <title>Books - Michael Geraci</title>
-  <meta name="description" content="Books I'm reading and favorites from the past." />
-</Head>
-
 # Books
 
 Here are some of the books that I have greatly enjoyed

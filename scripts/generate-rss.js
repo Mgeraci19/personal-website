@@ -5,7 +5,7 @@ const RSS = require('rss');
 
 async function generateRssFeed() {
     const site_url = 'https://mgeraci19.github.io/personal-website';
-    const allPosts = fs.readdirSync(path.join(__dirname, '../pages/blog'));
+    const allPosts = fs.readdirSync(path.join(__dirname, '../content/blog'));
 
     const feed = new RSS({
         title: 'Michael Geraci | Thoughts',
@@ -20,7 +20,7 @@ async function generateRssFeed() {
     const posts = allPosts
         .filter(filename => filename.endsWith('.md') || filename.endsWith('.mdx'))
         .map(filename => {
-            const filePath = path.join(__dirname, '../pages/blog', filename);
+            const filePath = path.join(__dirname, '../content/blog', filename);
             const fileContent = fs.readFileSync(filePath, 'utf-8');
             const { data, content } = matter(fileContent);
             return {

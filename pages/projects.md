@@ -1,17 +1,10 @@
-import Head from 'next/head';
-
-<Head>
-  <title>Projects - Michael Geraci</title>
-  <meta name="description" content="A catalogue of my technical work and experiments." />
-</Head>
-
 # Projects
 
 <Callout type="note" title="Philosophy">
   I build tools to solve my own problems. Usually, that involves automation, data organization, or simple quality-of-life improvements.
 </Callout>
 
-## 🚀 Active Development
+## Active Development
 
 ### Anki Automation Tool
 **Automated Flashcard Generation CLI**
