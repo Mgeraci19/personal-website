@@ -16,10 +16,6 @@ const envConfig = {
   isProd,
 };
 
-const isProd = process.env.NODE_ENV === 'production';
-const envConfig = {
-  isProd,
-};
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
