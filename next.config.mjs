@@ -16,13 +16,16 @@ const envConfig = {
   isProd,
 };
 
+const isProd = process.env.NODE_ENV === 'production';
+const envConfig = {
+  isProd,
+};
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
   output: 'export',
-  basePath: isProd ? '/personal-website' : '',
-  assetPrefix: isProd ? '/personal-website/' : '',
   images: {
     unoptimized: true,
   },
