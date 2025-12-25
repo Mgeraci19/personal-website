@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import Callout from '../components/Callout';
 
 export default function Home() {
@@ -26,14 +27,14 @@ export default function Home() {
 
         <h2>Work</h2>
         <ul>
-          <li><a href="/projects">Projects</a> – Things I've built</li>
-          <li><a href="/blog">Thoughts</a> – Loose updates and essays</li>
+          <li><Link href="/projects">Projects</Link> – Things I've built</li>
+          <li><Link href="/blog">Thoughts</Link> – Loose updates and essays</li>
         </ul>
 
         <h2>Collection</h2>
         <ul>
-          <li><a href="/books">Books</a> – Reading list and favorites</li>
-          <li><a href="/links">Links</a> – Curated internet finds</li>
+          <li><Link href="/books">Books</Link> – Reading list and favorites</li>
+          <li><Link href="/links">Links</Link> – Curated internet finds</li>
         </ul>
 
         <h2>Personal</h2>

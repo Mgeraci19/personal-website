@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Navigation from './Navigation';
 import styles from '../styles/Layout.module.css';
 
@@ -9,7 +10,7 @@ export default function Layout({ children }) {
             <footer className={styles.footer}>
                 <div className={styles.footerContent}>
                     <span>© {new Date().getFullYear()} Michael Geraci</span>
-                    <a href="/rss.xml" className={styles.rssLink}>RSS</a>
+                    <Link href="/rss.xml" className={styles.rssLink} prefetch={false}>RSS</Link>
                 </div>
             </footer>
         </>
